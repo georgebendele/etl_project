@@ -26,8 +26,8 @@ Issues: The HTML that was being returned from our weather-data scraping was inco
 
 ## **T**ransform:
 
-The gun violence Excel file and the weather data csv were read into a Jupyter Notebook. The weather data had a duplicate index column read in from the csv, so this column was dropped. Since the gun violence data was already clean, we opted to transform the weather data to conform to the formatting of the gun violence data in order to merge the two datasets. The dates associated with the weather data were transformed by adding zeros before the single-digit day and month integers, then concatenating these day and month columns together with the year into a new column with formatting that matched the gun violence data (yyyy-mm-dd). This column was then transformed to a datetime data type. The two datasets were then merged on datetime.
+The gun violence Excel file and the weather data csv were read into a Jupyter Notebook. The weather data had a duplicate index column read in from the csv, so this column was dropped. Since the gun violence data was already clean, we opted to transform the weather data to conform to the formatting of the gun violence data in order to merge the two datasets. The dates associated with the weather data were transformed by adding zeros before the single-digit day and month integers, then concatenating these day and month columns together with the year into a new column with formatting that matched the gun violence data (yyyy-mm-dd). This column was then transformed to a datetime data type.
 
 ## **L**oad:
 
-The resulting merged data was placed in a MySQL database using pymysql. Since the datasets were matched by date, without missing values, we decided that an SQL database was optimal.
+The resulting datasets were then placed as 2 tables (gv and weather) in a MySQL database using pymysql. Since the datasets were matched by date, without missing values, we decided that an SQL database was optimal.
