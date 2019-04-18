@@ -31,3 +31,8 @@ The gun violence Excel file and the weather data csv were read into a Jupyter No
 ## **L**oad:
 
 The resulting merged data was placed in a MySQL database using pymysql. Since the datasets were matched by date, without missing values, we decided that an SQL database was optimal.
+
+## **C**onclusion:
+
+The resulting merged data was placed in a MySQL database using pymysql. Since the datasets were matched by date, without missing values, we decided that an SQL database was optimal.
+![alt text](https://github.com/georgebendele/etl_project/blob/master/img/temp_vs_violence.png?raw=true)
