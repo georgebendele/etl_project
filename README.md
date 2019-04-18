@@ -34,5 +34,5 @@ The resulting merged data was placed in a MySQL database using pymysql. Since th
 
 ## **C**onclusion:
 
-The resulting merged data was placed in a MySQL database using pymysql. Since the datasets were matched by date, without missing values, we decided that an SQL database was optimal.
+The premise for this exercise was to determine any correlations between daily temperatures and gun violence incidence. The a linear regression line through the scatter plot of temperature highs and violent incidents in San Antonio between April and June 2018 shows a slightly negative correlation. However, no conclusive conclusion can be made of correlation or non-correlation, primarily because of the limited dataset.
 ![alt text](https://github.com/georgebendele/etl_project/blob/master/img/temp_vs_violence.png?raw=true)
