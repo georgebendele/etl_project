@@ -28,11 +28,11 @@ Issues: The HTML that was being returned from our weather-data scraping was inco
 
 ## **T**ransform:
 
-The gun violence Excel file and the weather data csv were read into a Jupyter Notebook. The weather data had a duplicate index column read in from the csv, so this column was dropped. Since the gun violence data was already clean, we opted to transform the weather data to conform to the formatting of the gun violence data in order to merge the two datasets. The dates associated with the weather data were transformed by adding zeros before the single-digit day and month integers, then concatenating these day and month columns together with the year into a new column with formatting that matched the gun violence data (yyyy-mm-dd). This column was then transformed to a datetime data type. We also removed a space from the names of the columns in the dataframe, so that we could later use those names in the database for joins.
+The gun violence Excel file and the weather data csv were read into a Jupyter Notebook. The weather data had a duplicate index column read in from the csv, so this column was dropped. Since the gun violence data was already clean, we opted to transform the weather data to conform to the formatting of the gun violence data in order to merge the two datasets. The dates associated with the weather data were transformed by adding zeros before the single-digit day and month integers, then concatenating these day and month columns together with the year into a new column with formatting that matched the gun violence data (yyyy-mm-dd). This column was then transformed to a datetime data type. The two datasets were then merged on datetime.
 
 ## **L**oad:
 
-The resulting data was placed in a MySQL database using pymysql. Since the datasets were matched by date, without missing values, we decided that an SQL database was optimal. We have two options to store the data in the database: 1) We joined the data into a single dataframe and saved as a single table, and 2) we saved and stored each table individually in the relational database.
+The resulting merged data was placed in a MySQL database using pymysql. Since the datasets were matched by date, without missing values, we decided that an SQL database was optimal.
 
 ## **C**onclusion:
 
